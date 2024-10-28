@@ -4,5 +4,5 @@
 Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets.
 
 ### Folder Explaination
-- [**code_celltypist_implementation**](code_celltypist_implementation) Contains code related to implementing CellTypist, a model for cell type classification. And we used default parameters with batch_number=10 and batch_size=1000.
+- [**code_celltypist_implementation**](code_celltypist_implementation) Contains code related to implementing CellTypist, a model for cell type classification. And we used default parameters with batch_number=100 and batch_size=1000.
 
