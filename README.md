@@ -1,7 +1,7 @@
 # Coreset-based logistic regression for atlas-scale cell type annotation
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange) ![License](https://img.shields.io/badge/license-MIT-green) ![Gurobi](https://img.shields.io/badge/Powered_by-Gurobi-red)
 
-### Coreset for Logistic Regression
+### Coreset Illustration Diagram
 <img src="linear_regression.png" alt="Project Logo" width="500"/>
 
 ### Dataset Access
