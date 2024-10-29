@@ -15,7 +15,7 @@ Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7x
 
 | Folder                     | Description                                                                                   |
 |----------------------------|-----------------------------------------------------------------------------------------------|
-| `implementation_CellTypist`| Contains code related to implementing CellTypist, a model for cell type classification.       |
+| [**implementation_CellTypist**](implementation_CellTypist)| Contains code related to implementing CellTypist, a model for cell type classification.       |
 | `implementation_scMulan`   | Code related to implementing scMulan, a pre-trained language model for cell type classification. |
 | `our_coreset_log_reg`      | Coreset logistic regression algorithm implementation and testing on different datasets.       |
 | `our_get_mu`               | Solves a linear programming problem using Gurobi to find a complexity measure for a dataset. |
