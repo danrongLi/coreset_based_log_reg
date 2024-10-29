@@ -2,7 +2,7 @@
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange) ![License](https://img.shields.io/badge/license-MIT-green) ![Gurobi](https://img.shields.io/badge/Powered_by-Gurobi-red)
 
 ### Coreset for Logistic Regression
-![Project Logo](linear_regression.png){ width=50% }
+<img src="linear_regression.png" alt="Project Logo" width="200"/>
 
 ### Dataset Access
 Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: hECA, Simonson LV, Macosko Mouse Brain.
