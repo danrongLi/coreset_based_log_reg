@@ -1,5 +1,5 @@
 # Coreset-based logistic regression for atlas-scale cell type annotation
-![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange) ![Gurobi](https://img.shields.io/badge/Powered_by-Gurobi-red)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange) ![Gurobi](https://img.shields.io/badge/Powered_by-Gurobi-green)
 
 ### Dataset Access
 Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: hECA, Simonson LV, Macosko Mouse Brain.
