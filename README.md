@@ -1,8 +1,17 @@
 # Coreset-based logistic regression for atlas-scale cell type annotation
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue) ![Jupyter Notebook](https://img.shields.io/badge/Notebook-Jupyter-orange) ![License](https://img.shields.io/badge/license-MIT-green) ![Gurobi](https://img.shields.io/badge/Powered_by-Gurobi-red)
 
+## Coreset-Based Logistic Regression
+
+In this project, we utilize a **coreset** approach to perform **Logistic Regression** efficiently on large datasets. Instead of running logistic regression on the entire dataset, we sample a subset of rows (the "coreset") from the original data matrix. This coreset is a smaller, representative subset that preserves the essential characteristics of the full dataset, ensuring that the **log loss is approximately preserved** when training on the coreset.
+
+### Why Use a Coreset?
+By reducing the dataset size while maintaining its essential structure, we achieve faster computation with minimal loss in accuracy. This approach is especially useful for large-scale data, where directly training on the full dataset may be computationally prohibitive.
+
 ### Coreset Illustration Diagram
+The following diagram illustrates the coreset sampling process, where selected rows (highlighted) represent the coreset extracted from the original matrix:
 <img src="linear_regression.png" alt="Project Logo" width="500"/>
+The coreset-based logistic regression preserves key properties of the data, providing an efficient alternative to training on the entire dataset.
 
 ### Dataset Access
 Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: hECA, Simonson LV, Macosko Mouse Brain.
