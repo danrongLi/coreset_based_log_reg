@@ -10,7 +10,9 @@ By reducing the dataset size while maintaining its essential structure, we achie
 
 ### Coreset Illustration Diagram
 The following diagram illustrates the coreset sampling process, where selected rows (highlighted) represent the coreset extracted from the original matrix:
+
 <img src="linear_regression.png" alt="Project Logo" width="500"/>
+
 The coreset-based logistic regression preserves key properties of the data, providing an efficient alternative to training on the entire dataset.
 
 ### Dataset Access
