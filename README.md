@@ -3,7 +3,7 @@
 
 ## Coreset-Based Logistic Regression
 
-In this project, we utilize a **coreset** approach to perform **Logistic Regression** efficiently on large datasets. Instead of running logistic regression on the entire dataset, we uniformly sample a subset of rows (the "coreset") from the original data matrix. This coreset is a smaller, representative subset that preserves the essential characteristics of the full dataset, ensuring that the **log loss is approximately preserved** when training on the coreset.
+In this project, we utilize a **coreset** approach to perform **Logistic Regression** efficiently on large datasets. Instead of running logistic regression on the entire dataset, we uniformly sample a subset of rows (the "coreset") from the original data matrix. This coreset is a smaller representative subset that preserves the essential characteristics of the full dataset, ensuring that the **log loss is approximately preserved** when training on the coreset.
 
 ### Why Use a Coreset?
 By reducing the dataset size while maintaining its essential structure, we achieve faster computation with minimal loss in accuracy. This approach is especially useful for large-scale data, where directly training on the full dataset may be computationally prohibitive.
