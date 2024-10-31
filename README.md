@@ -17,3 +17,6 @@ Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7x
 - [**our_get_mu**](our_get_mu): Contains code in solving a linear programming problem with Gurobi in order to find a complexity measure for a dataset.
 
 ### Getting Started
+```bash
+git clone https://github.com/danrongLi/coreset_based_log_reg.git
+cd coreset_based_log_reg
