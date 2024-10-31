@@ -34,6 +34,7 @@ This project is compatible with IDEs like **PyCharm**, **VS Code**, and others t
 ```bash
 git clone https://github.com/danrongLi/coreset_based_log_reg.git
 cd coreset_based_log_reg
+```
 
 2. **Open in PyCharm**:
    - Open PyCharm.
