@@ -5,17 +5,17 @@
 
 In this project, we utilize a **coreset** approach to perform **Logistic Regression** efficiently on large datasets. Instead of running logistic regression on the entire dataset, we uniformly sample a subset of rows (the "coreset") from the original data matrix. This coreset is a smaller representative subset that preserves the essential characteristics of the full dataset, ensuring that the **log loss is approximately preserved** when training on the coreset.
 
-### Why Use a Coreset?
+## Why Use a Coreset?
 By reducing the dataset size while maintaining its essential structure, we achieve faster computation with minimal loss in accuracy. This approach is especially useful for large-scale data, where directly training on the full dataset may be computationally prohibitive.
 
-### Coreset Illustration Diagram
+## Coreset Illustration Diagram
 The following diagram illustrates the coreset sampling process, where selected rows (highlighted) represent the coreset extracted from the original matrix:
 
 <img src="linear_regression.png" alt="Project Logo" width="500"/>
 
 The coreset-based logistic regression preserves key properties of the data, providing an efficient alternative to training on the entire dataset.
 
-### Getting Started
+## Getting Started
 This project is compatible with IDEs like **PyCharm**, **VS Code**, and others that support Python development. You can follow these steps to get started in PyCharm:
 
 1. **Clone the Repository**:
@@ -35,10 +35,10 @@ cd coreset_based_log_reg
    - Right-click on the script and select `Run` (or press the play button in PyCharm).
    - The results will be displayed in the console.
 
-### Dataset Access
+## Dataset Access
 Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: hECA, Simonson LV, Macosko Mouse Brain.
 
-### Folder Explaination
+## Folder Explaination
 - [**implementation_CellTypist**](implementation_CellTypist): Contains code related to implementing [CellTypist](https://github.com/Teichlab/celltypist), a model for cell type classification. We use default parameters with batch_number=100 and batch_size=1000 and set se_SGD = True,mini_batch = True to train our own CellTypist model with hECA data. 
 
 - [**implementation_scMulan**](implementation_scMulan): Contains code related to implementing [scMulan](https://github.com/SuperBianC/scMulan), a pre-trained langauge model for cell type classification.
