@@ -9,7 +9,7 @@ In this project, we utilize a **coreset** approach to perform **Logistic Regress
 By reducing the dataset size while maintaining its essential structure, we achieve faster computation with minimal loss in accuracy. This approach is especially useful for large-scale data, where directly training on the full dataset may be computationally prohibitive.
 
 ## Coreset Illustration Diagram
-The following diagram illustrates the coreset sampling process, where selected rows (highlighted) represent the coreset extracted from the original matrix:
+The following diagram illustrates the coreset sampling process, where selected rows (highlighted) represent the coreset extracted from the original matrix A:
 
 <img src="linear_regression.png" alt="Project Logo" width="500"/>
 
