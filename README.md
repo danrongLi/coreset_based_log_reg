@@ -29,7 +29,20 @@ Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7x
 
 ### Getting Started
 This project is compatible with IDEs like **PyCharm**, **VS Code**, and others that support Python development. You can follow these steps to get started in PyCharm:
+
+1. **Clone the Repository**:
 ```bash
 git clone https://github.com/danrongLi/coreset_based_log_reg.git
 cd coreset_based_log_reg
+
+2. **Open in PyCharm**:
+   - Open PyCharm.
+   - Go to `File > Open` and select the project directory.
+
+3. **Locate the Main Script**:
+   - In the project directory, locate the main `.py` file that you want to run.
+
+4. **Run the Script**:
+   - Right-click on the script and select `Run` (or press the play button in PyCharm).
+   - The results will be displayed in the console.
 
