@@ -45,6 +45,8 @@ Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7x
 
 - [**our_coreset_log_reg**](our_coreset_log_reg): Contains code of our coreset logistic regression algorithm, and its implmentation on training and testing on the same dataset as well as its implementation on training with hECA and testing on LV dataset.
 
+- [**our_get_lewis_weight**](our_get_lewis_weight): Contains code in finding the lewis weight for each row of a matrix according to an interative algorithm introduced in [Lp Row Sampling by Lewis Weights](https://doi.org/10.1145/2746539.2746567) 
+
 - [**our_get_mu**](our_get_mu): Contains code in solving a linear programming problem with Gurobi in order to find a complexity measure for a dataset.
 
   
