@@ -36,8 +36,7 @@ cd coreset_based_log_reg
    - The results will be displayed in the console.
 
 ## Dataset Access
-Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: hECA, Simonson LV, Macosko Mouse Brain.
-
+Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7xPyaBG?usp=share_link) to access the datasets: CV, DVC, hECA, LV, and Skin Data.
 ## Folder Explaination
 - [**implementation_CellTypist**](implementation_CellTypist): Contains code related to implementing [CellTypist](https://github.com/Teichlab/celltypist), a model for cell type classification. We use default parameters with batch_number=100 and batch_size=1000 and set se_SGD = True,mini_batch = True to train our own CellTypist model with hECA data. 
 
