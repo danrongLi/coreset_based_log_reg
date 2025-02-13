@@ -103,7 +103,7 @@ def not_train_logistic_regression(X_train, y_train):
     """
     logger.info("begin training")
     begin = time.time()
-    clf = LogisticRegression(C=0.01,multi_class='ovr', solver='lbfgs', max_iter=200, n_jobs=-1)
+    clf = LogisticRegression(C=0.001,multi_class='ovr', solver='lbfgs', max_iter=200, n_jobs=-1)
     clf.fit(X_train, y_train)
     end = time.time()
     logger.info("end training")
