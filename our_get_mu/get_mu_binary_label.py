@@ -435,13 +435,21 @@ X = adata.X
 y = y_encoded
 n_samples = np.shape(adata.X)[0]
 
-#pca = PCA(n_components = 50)
+
+#these are for centering
+#X_in = X.toarray() if sparse.issparse(X) else X
+#scaler = StandardScaler(with_mean=True, with_std=True)  # center only
+#X_centered = scaler.fit_transform(X_in)
+#X = X_centered
+
+#remove the pca and add the centering above
+
 pca = PCA(n_components=10, svd_solver='arpack')
 pca.fit(X)
 data_pca = pca.transform(X)
 X = data_pca
 
-logger.info("done PCA")
+#logger.info("done PCA")
 
 logger.info("begin creating the model")
 model, z_plus, z_minus, DyX_output, p_output = create_model_previous(X,y, n_samples)
@@ -522,12 +530,18 @@ def beta_proj_orth_to_class(X, labels_raw, target_class, beta, tol=1e-12):
 
 
 
+mus_star = {c: mu_for_class(X, labels_raw, c, beta_star) for c in majority_class}
+mus = {c: mu_for_class(X, labels_raw, c, beta) for c in majority_class}
 
-mus_star = {c: mu_for_class(X, labels_raw, c, beta_proj_orth_to_class(X,labels_raw, c, beta_star, tol=1e-12)) for c in majority_class}
+
+#mus_star = {c: mu_for_class(X, labels_raw, c, beta_proj_orth_to_class(X,labels_raw, c, beta_star, tol=1e-12)) for c in majority_class}
 mu_star_summary = {"max": max(mus_star.values()), "median": float(np.median(list(mus_star.values()))), "mean": float(np.mean(list(mus_star.values()))), "min": min(mus_star.values())}
 
-mus = {c: mu_for_class(X, labels_raw, c, beta_proj_orth_to_class(X,labels_raw, c, beta, tol=1e-12)) for c in majority_class}
+#mus = {c: mu_for_class(X, labels_raw, c, beta_proj_orth_to_class(X,labels_raw, c, beta, tol=1e-12)) for c in majority_class}
 mu_summary = {"max": max(mus.values()), "median": float(np.median(list(mus.values()))), "mean": float(np.mean(list(mus.values()))), "min": min(mus.values())}
+
+
+
 
 logger.info("mus_star when using beta_star")
 logger.info(mu_star_summary)
