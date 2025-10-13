@@ -436,6 +436,14 @@ y = y_encoded
 n_samples = np.shape(adata.X)[0]
 
 
+key = "cell_type"
+logger.info("about to find out whether mu=1 in the ovr situation")
+labels_raw = adata.obs[key].to_numpy()
+vc = adata.obs[key].value_counts()
+majority_class = vc.idxmax()
+y_pm = np.where(labels_raw == majority_class, +1.0, -1.0) 
+y = y_pm
+
 #these are for centering
 #X_in = X.toarray() if sparse.issparse(X) else X
 #scaler = StandardScaler(with_mean=True, with_std=True)  # center only
@@ -444,7 +452,7 @@ n_samples = np.shape(adata.X)[0]
 
 #remove the pca and add the centering above
 
-pca = PCA(n_components=10, svd_solver='arpack')
+pca = PCA(n_components=1000, svd_solver='arpack')
 pca.fit(X)
 data_pca = pca.transform(X)
 X = data_pca
@@ -515,18 +523,18 @@ beta_star, *_ = lstsq(A, z)
 # or: beta_star = np.linalg.pinv(A) @ z
 
 
-def beta_proj_orth_to_class(X, labels_raw, target_class, beta, tol=1e-12):
-    """Project beta to be orthogonal to g_c = X^T y^{(c)} so that Q=0."""
-    ypm = np.where(labels_raw == target_class, +1.0, -1.0).astype(float)
-    g = X.T @ ypm                      # shape (d,)
-    g2 = float(np.dot(g, g))
-    if g2 <= tol:
-        # No projection needed (already ~orthogonal or y has no energy in X)
-        b = beta
-    else:
-        b = beta - (np.dot(beta, g) / g2) * g
-    n = float(np.linalg.norm(b))
-    return b if n <= tol else b / n
+#def beta_proj_orth_to_class(X, labels_raw, target_class, beta, tol=1e-12):
+#    """Project beta to be orthogonal to g_c = X^T y^{(c)} so that Q=0."""
+#    ypm = np.where(labels_raw == target_class, +1.0, -1.0).astype(float)
+#    g = X.T @ ypm                      # shape (d,)
+#    g2 = float(np.dot(g, g))
+#    if g2 <= tol:
+#        # No projection needed (already ~orthogonal or y has no energy in X)
+#        b = beta
+#    else:
+#        b = beta - (np.dot(beta, g) / g2) * g
+#    n = float(np.linalg.norm(b))
+#    return b if n <= tol else b / n
 
 
 
@@ -543,8 +551,8 @@ mu_summary = {"max": max(mus.values()), "median": float(np.median(list(mus.value
 
 
 
-logger.info("mus_star when using beta_star")
-logger.info(mu_star_summary)
+#logger.info("mus_star when using beta_star")
+#logger.info(mu_star_summary)
 
 logger.info("mus when using any beta")
 logger.info(mu_summary)
