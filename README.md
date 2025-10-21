@@ -42,6 +42,8 @@ Click [here](https://drive.google.com/drive/folders/1mj5txQ_L_9jYs397UxSTcA4L_7x
 
 - [**implementation_scMulan**](implementation_scMulan): Contains code related to implementing [scMulan](https://github.com/SuperBianC/scMulan), a pre-trained langauge model for cell type classification.
 
+- [**niche_extension**](niche_extension): Contains code for additional niche label experiments. A [Google Colab version](https://colab.research.google.com/drive/1wjeWuys_cdI3jvvQOk6966sCMtw0CwD3?usp=sharing) with a built-in table of contents is also available for interactive execution and quick viewing. Datasets used here can be accessed directly within the code.
+
 - [**our_coreset_log_reg**](our_coreset_log_reg): Contains code of our coreset logistic regression algorithm, and its implmentation on training and testing on the same dataset as well as its implementation on training with hECA and testing on LV dataset.
 
 - [**our_get_lewis_weight**](our_get_lewis_weight): Contains code in finding the approximate lewis weight for each row of a matrix according to an interative algorithm introduced in this paper: [Lp Row Sampling by Lewis Weights](https://doi.org/10.1145/2746539.2746567) 
