@@ -1191,8 +1191,13 @@ print("\nClassification report:\n", classification_report(all_labels, all_preds,
 
 # data source - train: https://drive.google.com/file/d/1p0VhWBAQjFCzAES0a9TeWqvc-DT2y5OA/view?usp=drive_link
 # data source - test: https://drive.google.com/file/d/1v1IJx74Lexii22jONGsuTUycY9iw99-x/view?usp=drive_link
-adata_train = anndata.read_h5ad("/content/drive/MyDrive/nanostring_cosmx_human_nsclc_batch1.h5ad")
-adata_test = anndata.read_h5ad("/content/drive/MyDrive/nanostring_cosmx_human_nsclc_batch3.h5ad")
+# adata_train = anndata.read_h5ad("/content/drive/MyDrive/nanostring_cosmx_human_nsclc_batch1.h5ad")
+# adata_test = anndata.read_h5ad("/content/drive/MyDrive/nanostring_cosmx_human_nsclc_batch3.h5ad")
+
+# data source: https://drive.google.com/file/d/1am8QkLxP82FRKSl1WDdQj4yl4tux3nMx/view?usp=share_link
+nsclc_adata = anndata.read_h5ad("/content/drive/MyDrive/nanostring_cosmx_human_nsclc_reference_query_mapping.h5ad")
+adata_train = nsclc_adata[nsclc_adata.obs['batch']=='lung5_rep1',]
+adata_test = nsclc_adata[nsclc_adata.obs['batch']=='lung6',]
 
 np.shape(adata_train), np.shape(adata_test)
 
